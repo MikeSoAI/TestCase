@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Visual Designer | Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom Scrollbar - Light Theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f4f4f4;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #aaa;
+      }
+
+      /* Liquid Organic Animation */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(1deg); }
+      }
+      
+      @keyframes morph {
+        0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        50% { border-radius: 40% 60% 60% 40% / 40% 60% 30% 60%; }
+        100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+      }
+
+      .animate-float {
+        animation: float 8s ease-in-out infinite;
+      }
+
+      .animate-morph {
+        animation: morph 10s ease-in-out infinite;
+      }
+
+      /* Frosted Glass - Light */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      /* Chrome Text - Silver/Dark */
+      .text-chrome {
+        background: linear-gradient(to bottom, #666 0%, #000 50%, #ccc 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      
+      body {
+        background-color: #ffffff;
+        color: #000000;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-black antialiased selection:bg-black selection:text-white font-sans">
+    <div id="root"></div>
+  </body>
+</html>
