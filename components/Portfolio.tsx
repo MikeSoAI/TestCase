@@ -3,6 +3,9 @@ import { PROJECTS } from '../constants';
 import { Project } from '../types';
 
 const PortfolioItem: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
+  // Format index to be 2 digits (e.g., 01, 02)
+  const formattedIndex = (index + 1).toString().padStart(2, '0');
+
   return (
     <div className="group relative flex flex-col gap-4 cursor-pointer">
       {/* Image Container */}
@@ -14,6 +17,11 @@ const PortfolioItem: React.FC<{ project: Project; index: number }> = ({ project,
         />
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Floating Index Number on Image (Fixes TS unused variable error & adds style) */}
+        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-2 py-1 z-10">
+           <span className="font-mono text-xs font-bold text-black">No.{formattedIndex}</span>
+        </div>
       </div>
       
       {/* Typography / Caption */}
