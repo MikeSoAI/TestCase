@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Visual Designer | Creative Portfolio</title>
-    <!-- Keep Tailwind CDN for simplicity in this setup -->
+    <!-- Tailwind CDN (Keep for simplicity without complex PostCSS config) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +58,7 @@
         color: #000000;
       }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
@@ -72,7 +72,7 @@
 </head>
   <body class="bg-white text-black antialiased selection:bg-black selection:text-white font-sans">
     <div id="root"></div>
-    <!-- This is the magic line that connects Vite to your React code -->
+    <!-- Vite Entry Point -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
