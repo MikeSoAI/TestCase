@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Visual Designer | Creative Portfolio</title>
+    <!-- Keep Tailwind CDN for simplicity in this setup -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,13 +45,6 @@
         animation: morph 10s ease-in-out infinite;
       }
 
-      /* Frosted Glass - Light */
-      .glass-panel {
-        background: rgba(255, 255, 255, 0.4);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(0, 0, 0, 0.05);
-      }
-
       /* Chrome Text - Silver/Dark */
       .text-chrome {
         background: linear-gradient(to bottom, #666 0%, #000 50%, #ccc 100%);
@@ -69,12 +63,16 @@
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
 </head>
   <body class="bg-white text-black antialiased selection:bg-black selection:text-white font-sans">
     <div id="root"></div>
+    <!-- This is the magic line that connects Vite to your React code -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
